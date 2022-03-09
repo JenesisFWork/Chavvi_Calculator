@@ -1,10 +1,3 @@
-/*Programmer : Jenesis Fabia
-  -Sample program came from 
-  Prof. Solomon.
-  -Will be tweaking the code to 
-  fit the assignment
-*/
-
 package com.chavviCalcExample;
 
 import java.util.*;
@@ -49,6 +42,9 @@ public class ChavviCalcExampleApp {
     System.out.println("Chavvi Calc");
     printMenuLine();
 
+    printMenuCommand("A = 0.000", "B = 0.000"); //display A & B
+
+    printMenuLine();
     printMenuCommand('a', "Enter a Value for A");
     printMenuCommand('b', "Enter a Value for B");
     printMenuCommand('+', "Add");
@@ -59,6 +55,12 @@ public class ChavviCalcExampleApp {
     printMenuCommand('q', "Quit");
 
     printMenuLine();
+  }
+
+  //got help from a tutor and this is their solution
+  private static void printMenuCommand(String string, String desc) {
+      System.out.print(string);
+      System.out.println(desc);
   }
 
   // get first character from input
