@@ -50,6 +50,12 @@ public class ChavviCalcExampleApp {
     printMenuLine();
 
     printMenuCommand('a', "Enter a Value for A");
+    printMenuCommand('b', "Enter a Value for B");
+    printMenuCommand('+', "Add");
+    printMenuCommand('-', "Subtract");
+    printMenuCommand('*', "Multiply");
+    printMenuCommand('/', "Divide");
+    printMenuCommand('c', "Clear");
     printMenuCommand('q', "Quit");
 
     printMenuLine();
