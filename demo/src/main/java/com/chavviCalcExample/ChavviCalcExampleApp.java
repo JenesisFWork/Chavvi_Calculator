@@ -2,7 +2,8 @@ package com.chavviCalcExample;
 
 import java.util.*;
 
-/* Making a 
+/* Programmer: Jenesis Fabia
+ * Making a 
  * chavvi calc calculator
  * using Prof. Solomon's code
  * as a starter
@@ -10,7 +11,7 @@ import java.util.*;
 public class ChavviCalcExampleApp {
 
   // from a tutor from Net Tutor
-public static double A,B;
+public static double A = 0.000,B=0.000;
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
@@ -47,7 +48,7 @@ public static double A,B;
     System.out.println("Chavvi Calc");
     printMenuLine();
 
-    printMenuCommand("A=0.000", "B=0.000"); //display A & B
+    printMenuCommand("A="+A, "B="+B); //display A & B
 
     printMenuLine();
     printMenuCommand('a', "Enter a Value for A");
@@ -65,7 +66,7 @@ public static double A,B;
   //got help from a tutor from Net Tutor
   private static void printMenuCommand(String string, String desc) {
       
-      System.out.println(string);
+      System.out.println(string+" ");
       System.out.println(desc);
   }
 
@@ -86,21 +87,25 @@ public static double A,B;
   // calculator functions
   private static Boolean executeCommand(Scanner scan, Character command) {
     Boolean success = true;
-    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    //from a tutor from Net Tutor
+    double result;
     switch (command) {
-      case 'q':
-        System.out.println("Thank you for using Chavvi Calc");
-        break;
-
-        //got help from a tutor from Net Tutor
       case 'a':
-        System.out.println("Enter a value of A");
-        A = myObj.nextDouble();
+        System.out.println("Enter a Value for A: ");
+        A = scan.nextDouble();
         break;
       case 'b':
-      System.out.println("Enter a value of B");
-      B = myObj.nextDouble();
-      break;
+        System.out.println("Enter a Value for B: ");
+        B = scan.nextDouble();
+        break;
+      case '+':
+        result = A + B;  
+        System.out.println("Values of A and B added and the result is "+result);
+        break;
+      case '-':
+        result = A - B;  
+        System.out.println("Values of A and B subtraced and the result is "+result);
+        break;
 
       default:
         System.out.println("ERROR: Unknown commmand");
