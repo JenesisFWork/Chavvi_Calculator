@@ -6,7 +6,7 @@ import java.util.*;
  * Making a 
  * chavvi calc calculator
  * using Prof. Solomon's code
- * as a starter
+ * as a starting point
  */
 public class ChavviCalcExampleApp {
 
