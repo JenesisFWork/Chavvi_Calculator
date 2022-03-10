@@ -2,10 +2,15 @@ package com.chavviCalcExample;
 
 import java.util.*;
 
-/*
+/* Making a 
  * chavvi calc calculator
+ * using Prof. Solomon's code
+ * as a starter
  */
 public class ChavviCalcExampleApp {
+
+  // from a tutor from Net Tutor
+public static double A,B;
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
@@ -42,7 +47,7 @@ public class ChavviCalcExampleApp {
     System.out.println("Chavvi Calc");
     printMenuLine();
 
-    printMenuCommand("A = 0.000", "B = 0.000"); //display A & B
+    printMenuCommand("A=0.000", "B=0.000"); //display A & B
 
     printMenuLine();
     printMenuCommand('a', "Enter a Value for A");
@@ -57,9 +62,10 @@ public class ChavviCalcExampleApp {
     printMenuLine();
   }
 
-  //got help from a tutor and this is their solution
+  //got help from a tutor from Net Tutor
   private static void printMenuCommand(String string, String desc) {
-      System.out.print(string);
+      
+      System.out.println(string);
       System.out.println(desc);
   }
 
@@ -80,11 +86,22 @@ public class ChavviCalcExampleApp {
   // calculator functions
   private static Boolean executeCommand(Scanner scan, Character command) {
     Boolean success = true;
-
+    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
     switch (command) {
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
+
+        //got help from a tutor from Net Tutor
+      case 'a':
+        System.out.println("Enter a value of A");
+        A = myObj.nextDouble();
+        break;
+      case 'b':
+      System.out.println("Enter a value of B");
+      B = myObj.nextDouble();
+      break;
+
       default:
         System.out.println("ERROR: Unknown commmand");
         success = false;
