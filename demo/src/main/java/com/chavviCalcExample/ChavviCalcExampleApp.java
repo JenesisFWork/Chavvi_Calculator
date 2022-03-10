@@ -106,7 +106,22 @@ public static double A = 0.000,B=0.000;
         result = A - B;  
         System.out.println("Values of A and B subtraced and the result is "+result);
         break;
-
+        case '/':
+        result = A / B;  
+        System.out.println("Values of A and B divided and the result is "+result);
+        break;
+      case '*':
+        result = A * B;  
+        System.out.println("Values of A and B multiplied and the result is "+result);
+        break;  
+      case 'c':
+        A = 0.00;
+        B = 0.00;
+        System.out.println("Values of A and B set back to default(0.00)");
+        break;    
+      case 'q':
+        System.out.println("Thank you for using Chavvi Calc");
+        break;
       default:
         System.out.println("ERROR: Unknown commmand");
         success = false;
